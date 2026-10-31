@@ -58,9 +58,8 @@ func main() {
 					break
 				}
 
-				nextLevel := len(q)*len(buttons)
-				q = queue[:nextLevel]
-				queue = queue[nextLevel:]
+				q = queue[:len(queue)]
+				queue = queue[len(queue):]
 			}
 
 			minCount = int(math.Min(float64(count), float64(minCount)))
